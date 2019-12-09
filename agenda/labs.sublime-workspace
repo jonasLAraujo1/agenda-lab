@@ -1,0 +1,757 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"age",
+				"Agenda"
+			],
+			[
+				"no",
+				"nova_agenda"
+			],
+			[
+				"fi",
+				"fim_bd"
+			],
+			[
+				"in",
+				"inicio_bd"
+			],
+			[
+				"i",
+				"inicio"
+			],
+			[
+				"li",
+				"lista"
+			],
+			[
+				"ta",
+				"tamanho1"
+			],
+			[
+				"lis",
+				"lista_bd"
+			],
+			[
+				"di",
+				"dia_semana"
+			],
+			[
+				"a",
+				"aulas"
+			],
+			[
+				"aul",
+				"aulas"
+			],
+			[
+				"al",
+				"alternar"
+			],
+			[
+				"pr",
+				"professor"
+			],
+			[
+				"valo",
+				"valores_alter"
+			],
+			[
+				"hora",
+				"horario"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"s",
+				"agenda_services"
+			],
+			[
+				"h",
+				"horario_bd"
+			],
+			[
+				"fo",
+				"formulario_horario"
+			],
+			[
+				"for",
+				"formulario_horario"
+			],
+			[
+				"cl",
+				"cleaned_data"
+			],
+			[
+				"pa",
+				"pagina_cadastro"
+			],
+			[
+				"T",
+				"TimeField"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views.py",
+			"settings":
+			{
+				"buffer_size": 1837,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "services/agenda_services.py",
+			"settings":
+			{
+				"buffer_size": 4320,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "forms.py",
+			"settings":
+			{
+				"buffer_size": 408,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "entidades/agenda.py",
+			"settings":
+			{
+				"buffer_size": 420,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models.py",
+			"settings":
+			{
+				"buffer_size": 1241,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/agenda/agenda_bootstrap.html",
+			"settings":
+			{
+				"buffer_size": 1945,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "urls.py",
+			"settings":
+			{
+				"buffer_size": 539,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/agenda/pagina_cadastro.html",
+			"settings":
+			{
+				"buffer_size": 1152,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/agenda/cadastro_etapa2.html",
+			"settings":
+			{
+				"buffer_size": 776,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ter",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"termin",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"t",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ht",
+				"HTMLBeautify"
+			],
+			[
+				"col",
+				"UI: Select Color Scheme"
+			],
+			[
+				"mo",
+				"Monokai Pro: select theme"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"termi",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lab/projetos/labs",
+		"/home/lab/projetos/labs/agenda_labs",
+		"/home/lab/projetos/labs/agenda_labs/agenda",
+		"/home/lab/projetos/labs/agenda_labs/agenda/entidades",
+		"/home/lab/projetos/labs/agenda_labs/agenda/migrations",
+		"/home/lab/projetos/labs/agenda_labs/agenda/services",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda"
+	],
+	"file_history":
+	[
+		"/media/lab/Dados/Videos/Aleatórios/Django ORM parte 1 Treina WEB/treinaweb-django-orm-parte-1-master/clientes/views/cliente_views.py",
+		"/media/lab/Dados/Videos/Aleatórios/Django ORM parte 1 Treina WEB/treinaweb-django-orm-parte-1-master/clientes/views/pedido_views.py",
+		"/media/lab/Dados/Videos/Aleatórios/Django ORM parte 1 Treina WEB/treinaweb-django-orm-parte-1-master/clientes/views/produto_views.py",
+		"/media/lab/Dados/Videos/Aleatórios/Django ORM parte 1 Treina WEB/treinaweb-django-orm-parte-1-master/clientes/templates/pedidos/form_pedido.html",
+		"/home/lab/Documentos/teste_dados.py",
+		"/home/lab/Documentos/teste_data-hora.py",
+		"/home/lab/projetos/labs/agenda_labs/manage.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/base2.html",
+		"/media/lab/Dados/Documentos/projetos/semana-python_django/gerenciador_tarefas/app/urls.py",
+		"/media/lab/Dados/Documentos/projetos/semana-python_django/gerenciador_tarefas/app/templates/tarefas/listar_tarefas.html",
+		"/media/lab/Dados/Documentos/projetos/semana-python_django/gerenciador_tarefas/app/views.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/models.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/views.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/agenda_bootstrap.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda/services/agenda_services.py",
+		"/media/lab/Dados/Documentos/projetos/semana-python_django/gerenciador_tarefas/app/services/tarefa_service.py",
+		"/media/lab/Dados/Documentos/projetos/reuniao/gerenciador_reunioes/app/services/reuniao_service.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/entidades/agenda.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/pagina_cadastro.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda_labs/settings.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/forms.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/urls.py",
+		"/media/lab/Dados/Documentos/projetos/reuniao/gerenciador_reunioes/app/templates/reunioes/form_data_reuniao.html",
+		"/media/lab/Dados/Documentos/projetos/reuniao/gerenciador_reunioes/app/templates/reunioes/form_cadastro_usuario.html",
+		"/media/lab/LUCIANA/cadastro_part1.c",
+		"/media/lab/TANIA/index_agenda.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/ver_agenda_tabela.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda/css/personal.css",
+		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda/css/bootstrap.min.css",
+		"/home/lab/projetos/labs/agenda_labs/agenda_labs/urls.py"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"livre",
+			"lista",
+			"horario",
+			"h6",
+			"h4",
+			"hover",
+			"hoover",
+			"mr-",
+			"lista",
+			"40",
+			"Breno Leonardo Araújo Silva da Costa"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Livre",
+			"lista_bd",
+			"h5",
+			"h6",
+			"livre"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								820,
+								820
+							]
+						],
+						"settings":
+						{
+							"SL.13.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "services/agenda_services.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4312,
+								4312
+							]
+						],
+						"settings":
+						{
+							"SL.14.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "entidades/agenda.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6,
+								6
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1241,
+								1241
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 421.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "templates/agenda/agenda_bootstrap.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1945,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1735,
+								1735
+							]
+						],
+						"settings":
+						{
+							"SL.18.region_keys":
+							[
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								539,
+								539
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "templates/agenda/pagina_cadastro.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1099,
+								1099
+							]
+						],
+						"settings":
+						{
+							"SL.21.region_keys":
+							[
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "templates/agenda/cadastro_etapa2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								359,
+								359
+							]
+						],
+						"settings":
+						{
+							"SL.22.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 63.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 136.0
+	},
+	"output.Terminus":
+	{
+		"height": 115.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 136.0
+	},
+	"pinned_build_system": "",
+	"project": "labs.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 359.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

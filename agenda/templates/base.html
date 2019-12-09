@@ -1,0 +1,37 @@
+ 
+<!DOCTYPE html>
+<html>
+
+	{% load static %}
+	<head>
+		{{ block.super }}
+		<link rel="stylesheet" type="text/css" href="{% static 'agenda/css/bootstrap.min.css'  %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'agenda/css/bootstrap-grid.min.css'  %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'agenda/css/bootstrap-reboot.min.css'  %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'agenda/css/personal.css'  %}">
+		<script src="{% static 'agenda/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'agenda/js/bootstrap.bundle.min.js' %}"></script>
+		{{endblock}}
+
+		
+		<title>
+
+		{% block title%}  {% endblock %}
+
+
+		</title>
+	</head>
+	<body>
+
+<div class="title">
+
+<h5>   AGENDAMENTO DE LABORATÓRIOS - BLOCO 06  </h5>
+</div>
+<div class="container">
+		{% block content %}
+
+
+		{% endblock %}
+		</div>
+	</body>
+</html>

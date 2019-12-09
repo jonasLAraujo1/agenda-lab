@@ -1,0 +1,41 @@
+{% extends 'base2.html' %}
+{% load meus_filtros %}
+{%block title%}
+pagina ver agenda
+{%endblock%}
+{%block content%}
+<br>
+<div class="card   mb-3" >
+  <div class="card-header text-center " style="background-color: #41E784"><h2> Informações de Reserva </h2>
+  </div>
+  <div class="card-body text-white bg-success">
+    <form method="post">
+      {%csrf_token%}
+      <label> Professor: </label>
+      {{formulario.professor|addclass:'form-control'}}
+      <br>
+      <label> Disciplina: </label>
+      {{formulario.disciplina|addclass:'form-control'}}
+      <br>
+      <label> Laboratório: </label>
+      {{formulario.laboratorio|addclass:'form-control'}}
+      <br>
+
+      <label> Turno: </label>
+      {{formulario.turno|addclass:'form-control'}}
+      <br>
+      <label> Dia da Semana: </label>
+      {{formulario.dia_semana|addclass:'form-control'}}
+      <br>
+      <label> Software Utilizado: </label>
+      {{formulario.soft_uso|addclass:'form-control'}}
+      <br>
+    </div>
+    <div class="card-footer text-center">
+      <input type="submit" class="btn btn-lg btn-info" value="Próximo Passo">
+    </div>
+  </div>
+  
+  <br>
+</form>
+{%endblock%}

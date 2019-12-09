@@ -1,0 +1,27 @@
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: -webkit-linear-gradient(left, #93B874, #C9DCB9); 
+    background: -o-linear-gradient(right, #93B874, #C9DCB9); 
+    background: -moz-linear-gradient(right, #93B874, #C9DCB9); 
+    background: linear-gradient(to right, #93B874, #C9DCB9); 
+    background-color: #93B874; 
+}
+
+div.title { text-align: center; color: yellow; font-size: 38; background: green; padding: 14px; border: left;  padding-right: 15px;
+ padding-left: 15px; padding-top: 15px;
+ padding-bottom: 15px;  border: 1px solid #ddd;
+ border: 1px solid rgba(86,61,124,.2); height: 60px;
+}
+
+div.row { text-align: center; color: white; font-size: 38; background: blue; padding: 14px; border: left;  padding-right: 15px;
+ padding-left: 15px; padding-top: 15px;
+ padding-bottom: 15px;  border: 1px solid #ddd;
+ border: 1px solid rgba(86,61,124,.2); height: 45px;
+}
+
+div.table { text-align: center; color: black; background: grey; padding: 18px; border: left;
+}

@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% load meus_filtros %}
+{%block title%}
+pagina ver agenda
+{%endblock%}
+{%block content%}
+<br>
+<div class="card   mb-3" >
+  <div class="card-header text-center " style="background-color: #41E784"><h2> Horarios de Agendamento </h2>
+  </div>
+  <div class="card-body text-white bg-success">
+    <form method="post">
+      {%csrf_token%}
+      <label> Inicio do Uso: </label>
+      {{formulario_horario.inicio_uso|addclass:'form-control'}}
+      <br>
+      <label> Fim do Uso: </label>
+      {{formulario_horario.inicio_uso|addclass:'form-control'}}
+      <br>
+      
+    </div>
+    <div class="card-footer text-center">
+      <input type="submit" class="btn btn-lg btn-info" value="Salvar Agendamento">
+    </div>
+  </div>
+  
+  <br>
+</form>
+{%endblock%}
