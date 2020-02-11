@@ -1,23 +1,21 @@
 from django.shortcuts import render, redirect
 from .forms import *
-from .entidades.agenda import Agenda, Horario
+from .entidades.agenda import *
 from .services import agenda_services
 # Create your views here.
 def mostrar_form(request):
 	if request.method =="POST":
 		formulario = FormAgenda(request.POST)
 		if formulario.is_valid():
-			professor = formulario.cleaned_data["professor"]
-			disciplina = formulario.cleaned_data["disciplina"]
-			laboratorio = formulario.cleaned_data["laboratorio"]
-			soft_uso = formulario.cleaned_data["soft_uso"]
-			turno = formulario.cleaned_data["turno"]
-			dia_semana = formulario.cleaned_data["dia_semana"]
-
-			nova_agenda=Agenda(professor=professor,disciplina=disciplina,
-				laboratorio=laboratorio,soft_uso=soft_uso,
-				horario=0,turno=turno,dia_semana=dia_semana)			
-			return redirect('form_etapa2',nova_agenda)
+			solicitante = formulario.cleaned_data["solicitante"]
+			local_solicitado = formulario.cleaned_data["local_solicitado"]
+			dias = formulario.cleaned_data["dia_semana"]
+			aulas = formulario.cleaned_data["aulas"]
+			observacoes = formulario.cleaned_data["observacoes"]
+			nova_agenda=Agenda(solicitante=solicitante,local_solicitado=local_solicitado,
+				dias=dias,aulas=aulas,observacoes=observacoes)
+			agenda_services.salvar_agenda(nova_agenda)			
+			return redirect('agenda1')
 			
 	formulario = FormAgenda()
 	return render(request, 'agenda/pagina_cadastro.html',{"formulario":formulario})
@@ -36,14 +34,19 @@ def form_etapa2(request,agenda_nova):
 
 
 def agenda1(request):
-	valores=agenda_services.retornar_agenda()
-	agenda_services.cadastro_vagas()	
-	return render(request,'agenda/agenda_bootstrap.html',{"valores":valores})
+	# agenda_services.salvar_dados()
+	# vagas_services.cadastro_vagas()
+	horarios=agenda_services.retornar_horarios()
+	estrutura=agenda_services.retornar_agenda()	
+	return render(request,'agenda/agenda.html',{'estrutura':estrutura})#,{"valores":valores})
 
 def agenda2(request):
-	valores=agenda_services.retornar_agenda(2)	
-	return render(request,'agenda/agenda_bootstrap.html',{"valores":valores})
+	valores=agenda_services.horarios()	
+	return render(request,'agenda/agenda.html',{"valores":valores,"range":range(5)})
 
 def agenda3(request):
 	valores=agenda_services.retornar_agenda(3)	
-	return render(request,'agenda/agenda_bootstrap.html',{"valores":valores})
+	return render(request,'agenda/agenda.html',{"valores":valores})
+def criarHorarios(request):
+	agenda_services.salvar_horario()	
+	return render(request,'agenda/agenda.html')

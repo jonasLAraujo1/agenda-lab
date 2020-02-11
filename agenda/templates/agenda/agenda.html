@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static%}
+{%block title%}
+pagina ver Outra forma
+{%endblock%}
+{% block extra %}
+<ul class="navbar-nav mr-md-1">
+	<li class="nav-item dropdown">
+<div class="dropdown" >
+  <button class="btn btn-outline-light dropdown-toggle" type="button" id="MenuButtonLab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Laboratórios
+  </button>
+  <div class="dropdown-menu" style="background-color: #81C784" aria-labelledby="MenuButtonLab">
+    <a class="dropdown-item" href="#"> Informática </a>
+    <a class="dropdown-item" href="#"> Redes </a>
+    <a class="dropdown-item" href="#"> Arquitetura </a>
+  </div>
+</div>
+</li>
+</ul>
+
+{% endblock %}
+{%block content%}
+
+<table class="table">
+
+	<thead>
+		
+		<tr class="bg-success">
+			<th scope="col"><h5>Horários / Dias</h5></th>
+			<th scope="col"><h5>Segunda-feira</h5></th>
+			<th scope="col"><h5>Terça-feira</h5></th>
+			<th scope="col"><h5>Quarta-feira</h5></th>
+			<th scope="col"><h5>Quinta-feira</h5></th>
+			<th scope="col"><h5>Sexta-feira</h5></th>
+		</tr>
+
+	</thead>
+	<tr >
+				<td class="bg-success" scope="row"><h5> </h5> </td>
+
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h3> Manhã  </h3></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+				</tr>
+			{%for k,item in estrutura.items %}
+		<tbody>
+			<tr >
+				<td class="bg-success" scope="row"><h5>{{k}} </h5> </td>
+				{%for i,j  in item.items %}
+					<td class="bg-light" scope="row"><h5> {{j}}  </h5></td>
+
+
+				{%endfor%}
+			{%if k == "11:30 as 12:20"  %}
+			<tr >
+				<td class="bg-success" scope="row"><h5> </h5> </td>
+
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h3> Tarde  </h3></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+				</tr>
+				{%endif%}
+
+			{%if k == "17:50 as 18:40"%}
+			<tr >
+				<td class="bg-success" scope="row"><h5> </h5> </td>
+
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h3> Noite  </h3></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+					<td class="bg-light" scope="row"><h5>   </h5></td>
+				</tr>
+	
+			{%endif%}
+			</tr>
+			{%endfor%}
+		</tbody>
+	
+
+</table>
+
+{%endblock%}

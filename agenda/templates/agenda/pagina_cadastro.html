@@ -1,4 +1,4 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 {% load meus_filtros %}
 {%block title%}
 pagina ver agenda
@@ -12,30 +12,32 @@ pagina ver agenda
     <form method="post">
       {%csrf_token%}
       <label> Professor: </label>
-      {{formulario.professor|addclass:'form-control'}}
+      {{formulario.solicitante|addclass:'form-control'}}
       <br>
-      <label> Disciplina: </label>
-      {{formulario.disciplina|addclass:'form-control'}}
-      <br>
-      <label> Laboratório: </label>
-      {{formulario.laboratorio|addclass:'form-control'}}
+      <label> Local: </label>
+      {{formulario.local_solicitado|addclass:'form-control'}}
       <br>
 
-      <label> Turno: </label>
-      {{formulario.turno|addclass:'form-control'}}
-      <br>
+
+      <div class="form-group" >
       <label> Dia da Semana: </label>
       {{formulario.dia_semana|addclass:'form-control'}}
-      <br>
-      <label> Software Utilizado: </label>
-      {{formulario.soft_uso|addclass:'form-control'}}
+      </div>
+
+      <div class="form-group">
+      <label> Horarios: </label>
+      {{formulario.aulas|addclass:'form-control'}}
+      </div>
+
+      <label> Observações: </label>
+      {{formulario.observacoes|addclass:'form-control'}}
       <br>
     </div>
     <div class="card-footer text-center">
-      <input type="submit" class="btn btn-lg btn-info" value="Próximo Passo">
+      <input type="submit" class="btn btn-lg btn-info" value="Salvar">
     </div>
-  </div>
   
   <br>
 </form>
+</div>
 {%endblock%}

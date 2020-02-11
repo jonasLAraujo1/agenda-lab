@@ -10,15 +10,32 @@ class TimeInput(forms.TimeInput):
 
 
 class FormAgenda(forms.ModelForm):
+	local_solicitado=forms.ModelChoiceField(queryset=Local.objects.all())
+	dia_semana=forms.ModelChoiceField(queryset=Dia.objects.all())
+	aulas=forms.ModelMultipleChoiceField(queryset=Horarios.objects.all())
+
 	class Meta:
 		model = Agenda
-		fields = ['professor','disciplina','laboratorio',
-		'soft_uso','turno','dia_semana']
+		fields = ['solicitante','local_solicitado','dia_semana','aulas','observacoes']
 		
 
-class FormHorario(forms.ModelForm):
-	#inicio_uso = forms.ModelChoiceField(queryset=Vagas.objects.all())
-	class Meta:
-		model = Horario
-		fields = '__all__'
-		
+# class FormHorario(forms.ModelForm):
+# 	#inicio_uso = forms.ModelChoiceField(queryset=Vagas.objects.all())
+# 	class Meta:
+# 		model = Horarios
+# 		fields = ['turno']
+
+# class FormLocal(forms.ModelForm):
+# 	#inicio_uso = forms.ModelChoiceField(queryset=Vagas.objects.all())
+# 	local_solicitado=forms.ModelChoiceField(queryset=Local.objects.all())
+# 	class Meta:
+# 		model = Agenda
+# 		fields = ['local_solicitado']
+
+# class FormDia(forms.ModelForm):
+# 	#inicio_uso = forms.ModelChoiceField(queryset=Vagas.objects.all())
+# 	dia_semana=forms.ModelChoiceField(queryset=Horarios.objects.all())
+# 	class Meta:
+# 		model = Agenda
+# 		fields = ['local_solicitado']
+# 				

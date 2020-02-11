@@ -2,47 +2,34 @@ from django.db import models
 
 # Create your models here.
 
-class Agenda(models.Model):
-	LABS_CHOICES = (
-        ("1", "Laboratório de Redes de Computadores"),
-        ("2", "Laboratório de Informática"),
-        ("3", "Laboratório de Arquitetura de Computadores")
 
-	)
-	TURNO_CHOICES = (
-        ("1", "Manhã"),
-        ("2", "Tarde"),
-        ("3", "Noite")
-	)
-	DIA_SEMANA_CHOICES = (
-		("1", "Segunda-Feira"),
-		("2", "Terça-Feira"),
-		("3", "Quarta-Feira"),
-		("4", "Quinta-Feira"),
-		("5", "Sexta-Feira"),
-	)
-
-	disciplina = models.CharField(max_length = 120, null = False, blank=False)
-	laboratorio = models.CharField(max_length = 1, choices = LABS_CHOICES, null=False, blank=False)
-	professor = models.CharField(max_length = 120, null = False, blank=False)
-	soft_uso = models.CharField(max_length = 120, null = True, blank=True)
-	horario = models.OneToOneField("Horario", on_delete = models.CASCADE)
-
-	turno = models.CharField(max_length = 1, choices = TURNO_CHOICES, null=False, blank=False)
-	dia_semana = models.CharField(max_length = 1, choices = DIA_SEMANA_CHOICES, null=False, blank=False)
-
-
-class Horario(models.Model):
-	fim_uso = models.TimeField(null=False, blank=False)
-	inicio_uso = models.TimeField(null=False, blank=False)
+class Horarios(models.Model):
 	
-class Vagas(models.Model):
-	STATUS_CHOICES = (
-        ("1", "Livre"),
-        ("2", "Ocupado")
-	)
+	# STATUS_CHOICES = (
+	# 	("1", "Livre"),
+	# 	("2", "Em Uso")
+	# )
+	intervalo = models.CharField(max_length = 14, null=False, blank=False)
+	# turno = models.CharField(max_length = 1, choices = TURNO_CHOICES, null=False, blank=False)
+	# dia_semana = models.CharField(max_length = 1, choices = DIA_SEMANA_CHOICES, null=False, blank=False)
+	# status = models.CharField(max_length = 1, choices = STATUS_CHOICES, null=False, blank=False)
+	def __str__(self):
+		return self.intervalo
+
+class Dia(models.Model):
+	dia_semana = models.CharField(max_length = 25, null=False, blank=False)
+	def __str__(self):
+		return self.dia_semana
+
+class Local(models.Model):
+	nome = models.CharField(max_length = 120, null=False, blank=False)
+	def __str__(self):
+		return self.nome
 	
-	laboratorio= models.CharField(max_length = 120, null=False, blank=False)
-	turno = models.CharField(max_length = 120, null=False, blank=False)
-	intervalo=models.CharField(max_length = 120, null=False, blank=False)
-	status=models.CharField(max_length = 1, choices = STATUS_CHOICES, null=False, blank=False)
+class Agenda(models.Model): #relacionamento 1 para muitos (um usuario pode fazer varios agendamentos, 
+# em varios horarios e em varios turnos)
+	solicitante= models.CharField(max_length = 120, null=False, blank=False)
+	local_solicitado = models.ForeignKey("Local", on_delete=models.CASCADE)
+	dias=models.ForeignKey("Dia", on_delete=models.CASCADE)
+	aulas=models.ManyToManyField(Horarios)
+	observacoes= models.CharField(max_length = 150, null=True, blank=True)

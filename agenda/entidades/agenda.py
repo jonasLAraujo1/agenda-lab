@@ -1,25 +1,26 @@
-class Agenda():
-	def __init__(self,professor,disciplina,laboratorio,soft_uso,horario,turno,dia_semana):
-		self.professor = professor
-		self.disciplina = disciplina
-		self.laboratorio = laboratorio
-		self.soft_uso = soft_uso
-		self.horario = horario
-		self.turno = turno
-		self.dia_semana = dia_semana
 
-class Horario():
-	def __init__(self,fim_uso,inicio_uso):
-		self.fim_uso = fim_uso
-		self.inicio_uso = inicio_uso
-class Vagas():
-	"""docstring for ClassName"""
-	def __init__(self,laboratorio,turno,intervalo,status):
-		self.laboratorio = laboratorio
-		self.turno = turno
+class Horarios():
+	def __init__(self,intervalo,turno,status):
 		self.intervalo = intervalo
+		self.turno = turno
 		self.status = status
 
+class Local():
+	"""docstring for ClassName"""
+	def __init__(self,nome,dia_semana,horario_alocado):
+		self.nome = nome
+		self.dia_semana = dia_semana
+		self.horario_alocado = horario_alocado
+
+
 		
+class Agenda():
+	def __init__(self,solicitante,dias,local_solicitado,aulas,observacoes):
+		
+		self.solicitante = solicitante
+		self.dias=dias
+		self.local_solicitado = local_solicitado
+		self.aulas = aulas
+		self.observacoes = observacoes	
 		
 		

@@ -82,7 +82,7 @@ DATABASES = {
 
 'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gerenciador_laboratorios',
+        'NAME': 'laboratorios',
         'USER':'root',
         'PASSWORD':'root',
         'HOST':'localhost',
