@@ -49,8 +49,12 @@ def retornar_horarios():
 	horarios=Horarios.objects.all()
 	return horarios
 
-def retornar_agenda():
-	agendas=Agenda.objects.all()
+def retornar_agenda(lab="Laboratório de Informática"):
+	""" Retorna agendamentos por local e 
+	prepara a estrutura pra visualização"""
+	local=Local.objects.get(nome=lab)
+
+	agendas=Agenda.objects.filter(local_solicitado=local.id).all()
 	horarios=Horarios.objects.all()
 	dias=Dia.objects.all()
 	estrutura={}
@@ -60,49 +64,59 @@ def retornar_agenda():
 		for dia in dias:
 			estrutura[valor][dia.id]="Livre"
 
-
 	for agenda in agendas:
+		# print(agenda.local_solicitado)
 		for i in agenda.aulas.all():
 			estrutura[i.intervalo][agenda.dias.id]=agenda.solicitante
-
-	# print(estrutura)
-		# estrutura[agenda.intervalo][agenda.dias.id]=""
-
-		# print(agenda.intervalo)
 	return estrutura
 
 
-def retornar_agenda_tarde(novo_horario):
-	m={1:"07:00 as 07:50",2:"07:50 as 08:40",3:"08:40 as 09:30",4:"09:50 as 10:40",5:"10:40 as 11:30",6:"11:30 as 12:20"}
-	t={1:"13:20 as 14:10",2:"14:10 as 15:00",3:"15:00 as 15:50",4:"16:10 as 17:00",5:"17:00 as 17:50",6:"17:50 as 18:40"}
-	n={1:"18:10 as 19:00",2:"19:00 as 19:50",3:"19:50 as 20:40",4:"20:50 as 21:40",5:"21:40 as 22:30"}
-	turno = novo_horario.inicio_uso.strftime('%H:%M')
-	if turno in m.values():
-		aulas=m
-	elif turno in t.values():
-		aulas=t
-	elif  turno in t.values():
-		aulas=n
-	horario_bd=Horario.objects.all()
+def verificar(agenda):
+	lab=agenda.local_solicitado
+	agenda_bd=retornar_agenda(lab)
+	# print(lab)
+	lista=[]
+
+	for i in agenda.aulas:
+		if agenda_bd[str(i)][agenda.dias.id] != "Livre":
+			lista.append(i)
+	return lista
+
+def retornar_locais():
+	locais=Local.objects.all()
+	return locais
+
+# def retornar_agenda_tarde(novo_horario):
+# 	m={1:"07:00 as 07:50",2:"07:50 as 08:40",3:"08:40 as 09:30",4:"09:50 as 10:40",5:"10:40 as 11:30",6:"11:30 as 12:20"}
+# 	t={1:"13:20 as 14:10",2:"14:10 as 15:00",3:"15:00 as 15:50",4:"16:10 as 17:00",5:"17:00 as 17:50",6:"17:50 as 18:40"}
+# 	n={1:"18:10 as 19:00",2:"19:00 as 19:50",3:"19:50 as 20:40",4:"20:50 as 21:40",5:"21:40 as 22:30"}
+# 	turno = novo_horario.inicio_uso.strftime('%H:%M')
+# 	if turno in m.values():
+# 		aulas=m
+# 	elif turno in t.values():
+# 		aulas=t
+# 	elif  turno in t.values():
+# 		aulas=n
+# 	horario_bd=Horario.objects.all()
 	
-	valores=[]
-	ocupados=[]
-	for i in horario_bd:
-		ocupados.append(i.dia_semana)
-	if novo_horario.dia_semana not in ocupados:
-		print("dia Livre")
-	else:
-		for i in horario_bd:
-			dia=i.dia_semana
-			if dia != novo_horario.dia_semana:
-				continue
-			else:
-				inicio=novo_horario.inicio_uso.strftime('%H:%M')
-				fim=novo_horario.fim_uso.strftime('%H:%M')
-				inicio_bd=i.inicio_uso.strftime('%H:%M')
-				fim_bd=i.fim_uso.strftime('%H:%M')
-				valores_novos=gerar_intervalo(aulas,inicio,fim)
-				valores_bd=gerar_intervalo(aulas,inicio_bd,fim_bd)
+# 	valores=[]
+# 	ocupados=[]
+# 	for i in horario_bd:
+# 		ocupados.append(i.dia_semana)
+# 	if novo_horario.dia_semana not in ocupados:
+# 		print("dia Livre")
+# 	else:
+# 		for i in horario_bd:
+# 			dia=i.dia_semana
+# 			if dia != novo_horario.dia_semana:
+# 				continue
+# 			else:
+# 				inicio=novo_horario.inicio_uso.strftime('%H:%M')
+# 				fim=novo_horario.fim_uso.strftime('%H:%M')
+# 				inicio_bd=i.inicio_uso.strftime('%H:%M')
+# 				fim_bd=i.fim_uso.strftime('%H:%M')
+# 				valores_novos=gerar_intervalo(aulas,inicio,fim)
+# 				valores_bd=gerar_intervalo(aulas,inicio_bd,fim_bd)
 
 	# if (alternar == 1):
 	# 	valores_alter={

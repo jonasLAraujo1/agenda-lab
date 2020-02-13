@@ -24,4 +24,13 @@ div.row { text-align: center; color: white; font-size: 38; background: blue; pad
 }
 
 div.table { text-align: center; color: black; background: grey; padding: 18px; border: left;
+
+
 }
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-uq3h{background-color:#b2ebf2;border-color:#A5D6A7;text-align:center;vertical-align:middle}
+/*.tg .tg-8tz9{color:#333333;border-color:#fe0000;text-align:left;vertical-align:middle}*/
+.tg .tg-alhi{background-color:#80deea;border-color:#A5D6A7;text-align:center;vertical-align:middle}
+.tg .tg-ribb{background-color:#fff;border-color:#A5D6A7;text-align:left;vertical-align:middle}

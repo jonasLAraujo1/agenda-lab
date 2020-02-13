@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static%}
+{%block title%}
+Inicio
+{%endblock%}
+{% block extra %}
+<ul class="navbar-nav mr-auto">
+  <form method="post">
+    {%csrf_token%}
+<div class="input-group sm-3">
+  <select class="btn btn-info mb-2" id="inputGroupSelect03" name="escolha">
+    <option  >{{local_default}}</option>
+    {%for local in locais%}
+    <option value="{{local}}">{{local}}</option>
+    {%endfor%}
+  </select>
+  
+    <button class="btn btn-light mb-2" type="submit">Mudar</button>
+  
+</div>
+</form>
+</ul>
+<!-- <ul class="navbar-nav mr-md-1">
+  <li class="nav-item dropdown">
+<div class="dropdown dropleft" >
+  <button class="btn btn-outline-light dropdown-toggle" type="button" id="MenuButtonLab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Local
+  </button>
+  <div class="dropdown-menu" style="background-color: #81C784" aria-labelledby="MenuButtonLab">
+    {%for local in locais%}
+    <a class="dropdown-item" href="#"> {{local}} </a>
+    {%endfor%}
+  </div>
+</div>
+</li>
+</ul>
+
+ -->
+{%endblock%}
+{%block content%}
+<center>
+<table class="tg" style="undefined;table-layout: fixed; width: 1072px">
+<colgroup>
+<col style="width: 117px">
+<col style="width: 191px">
+<col style="width: 191px">
+<col style="width: 191px">
+<col style="width: 191px">
+<col style="width: 191px">
+</colgroup>
+  <tr>
+    <th class="tg-alhi">DIAS</th>
+    {%for dia in dias%}
+    <th class="tg-alhi">{{dia}}</th>
+    
+    {%endfor%}
+  </tr>
+  <tr>
+    <td class="tg-uq3h" colspan="6">{{turno}}</td>
+  </tr>
+  {%for k,item in estrutura.items %}
+  <tr>
+    <td class="tg-alhi">{{k}}</td>
+    {%for i,j  in item.items %}
+    <td class="tg-ribb">{{j}}</td>
+    {%endfor%}
+    {%if k == "11:30 as 12:20" %}
+    <tr>
+    <td class="tg-uq3h" colspan="6">TARDE</td>
+  </tr>
+
+    {%endif%}
+    {%if k == "17:50 as 18:40"%}
+    <tr>
+    <td class="tg-uq3h" colspan="6">NOITE</td>
+  </tr>
+  {%endif%}
+    
+  </tr>
+  {%endfor%}
+</table>
+
+</center>
+{%endblock%}

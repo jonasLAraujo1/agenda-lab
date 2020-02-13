@@ -5,6 +5,14 @@ pagina ver agenda
 {%endblock%}
 {%block content%}
 <br>
+    {%if mensagens%}
+      <div class="alert alert-danger" role="alert">
+    {%for mensagem in mensagens%}
+        conflito no horario: {{mensagem}}<br>
+      
+      {%endfor%}
+      </div>
+{%endif%}
 <div class="card   mb-3" >
   <div class="card-header text-center " style="background-color: #41E784"><h2> Informações de Reserva </h2>
   </div>

@@ -4,16 +4,104 @@
 		"selected_items":
 		[
 			[
+				"age",
+				"agenda_services"
+			],
+			[
+				"retorn",
+				"retornar_agenda"
+			],
+			[
+				"a",
+				"agenda_services"
+			],
+			[
+				"lo",
+				"locais"
+			],
+			[
+				"al",
+				"all"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"dia",
+				"dias"
+			],
+			[
+				"int",
+				"intervalo"
+			],
+			[
+				"f",
+				"for\tFor Loop"
+			],
+			[
+				"re",
+				"retornar_agenda"
+			],
+			[
+				"ag",
+				"agenda_services"
+			],
+			[
+				"ser",
+				"agenda_services"
+			],
+			[
+				"loc",
+				"local"
+			],
+			[
+				"se",
+				"agenda_services"
+			],
+			[
 				"h",
-				"horario"
+				"height\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"for",
+				"form"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"hora",
+				"Horarios"
+			],
+			[
+				"c",
+				"create"
+			],
+			[
+				"horar",
+				"Horarios"
+			],
+			[
+				"hor",
+				"horarios"
+			],
+			[
+				"Ho",
+				"Horarios"
+			],
+			[
+				"Ma",
+				"ManyToManyField"
 			],
 			[
 				"in",
 				"intervalo_uso"
-			],
-			[
-				"age",
-				"agenda_services"
 			],
 			[
 				"if",
@@ -44,20 +132,8 @@
 				"lista_bd"
 			],
 			[
-				"di",
-				"dia_semana"
-			],
-			[
-				"a",
-				"aulas"
-			],
-			[
 				"aul",
 				"aulas"
-			],
-			[
-				"al",
-				"alternar"
 			],
 			[
 				"pr",
@@ -66,10 +142,6 @@
 			[
 				"valo",
 				"valores_alter"
-			],
-			[
-				"hora",
-				"horario"
 			],
 			[
 				"u",
@@ -81,10 +153,6 @@
 			],
 			[
 				"fo",
-				"formulario_horario"
-			],
-			[
-				"for",
 				"formulario_horario"
 			],
 			[
@@ -111,16 +179,61 @@
 			"file": "views.py",
 			"settings":
 			{
-				"buffer_size": 1943,
+				"buffer_size": 2339,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/agenda/agenda.html",
+			"file": "services/agenda_services.py",
 			"settings":
 			{
-				"buffer_size": 1952,
+				"buffer_size": 5900,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/agenda/agendalabs_tabela.html",
+			"settings":
+			{
+				"buffer_size": 1531,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/base.html",
+			"settings":
+			{
+				"buffer_size": 2093,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/agenda/pagina_cadastro.html",
+			"settings":
+			{
+				"buffer_size": 1110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/agenda/css/personal.css",
+			"settings":
+			{
+				"buffer_size": 1749,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models.py",
+			"settings":
+			{
+				"buffer_size": 1308,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -129,49 +242,7 @@
 			"file": "forms.py",
 			"settings":
 			{
-				"buffer_size": 589,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "entidades/agenda.py",
-			"settings":
-			{
-				"buffer_size": 554,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "from ..models import *\n\ndef gerar_intervalo(aulas,inicio,fim):\n\tlista=[]\n\tfor i in aulas:\n\t\t# print(aulas[i][:5:])\n\t\t# print()\n\t\tif str(inicio) in aulas[i][:5:]:\n\t\t\tprint(\"Aula inicia no \"+str(i)+\"° horario\")\n\t\t\tlista.append(i)\n\t\t\tprint(i)\n\t\tif str(fim) in aulas[i][9::]:\n\t\t\tprint(\"Aula termina no \"+str(i)+\"° horario\")\n\t\t\tlista.append(i)\n\tlista=list(range(lista[0],lista[1]+1))\n\treturn lista\n\n\n\t\ndef salvar_agenda(agenda):\n\tAgenda.objects.create(professor=agenda.professor,\n\t\tdisciplina=agenda.disciplina,laboratorio=agenda.laboratorio,\n\t\tsoft_uso=agenda.soft_uso,horario=agenda.horario,turno=agenda.turno, dia_semana=agenda.dia_semana)\n\n\ndef salvar_horario():\n\tfor dia in range(1,6): # quantidade de dias\n\t\tvalores=[\"07:00 as 07:50\",\"07:50 as 08:40\",\"08:40 as 09:30\",\n\t\t\t\"09:50 as 10:40\",\"10:40 as 11:30\",\"11:30 as 12:20\"]\n\t\tfor i in valores: #vlores dos horaraios para cada dia\n\t\t\tHorarios.objects.create(intervalo=i,dia_semana=dia,turno=\"1\",status=\"1\")\n\n\t\tvalores=[\"13:20 as 14:10\",\"14:10 as 15:00\",\"15:00 as 15:50\",\n\t\t\t\t\"16:10 as 17:00\",\"17:00 as 17:50\",\"17:50 as 18:40\"]\n\t\tfor i in valores:\n\t\t\tHorarios.objects.create(intervalo=i,dia_semana=dia,turno=\"2\",status=\"1\")\n\n\t\tvalores=[\"18:10 as 19:00\",\"19:00 as 19:50\",\"19:50 as 20:40\",\n\t\t\t\t\"20:50 as 21:40\",\"21:40 as 22:30\"]\n\t\tfor i in valores:\n\t\t\tHorarios.objects.create(intervalo=i,dia_semana=dia,turno=\"3\",status=\"1\")\n\t\n\t\n\n\ndef retornar_agenda(alternar=1):\n\tif (alternar == 1):\n\t\tvalores_alter={\n\t\t\t\"07:00 as 07:50\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"07:50 as 08:40\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"08:40 as 09:30\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"09:50 as 10:40\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"10:40 as 11:30\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"11:30 as 12:20\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"}\n\t\t\t}\n\t\taulas={1:\"07:00 as 07:50\",2:\"07:50 as 08:40\",3:\"08:40 as 09:30\",4:\"09:50 as 10:40\",5:\"10:40 as 11:30\",6:\"11:30 as 12:20\"}\n\telif (alternar==2):\n\t\tvalores_alter={\n\t\t\t\"13:20 as 14:10\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"14:10 as 15:00\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"15:00 as 15:50\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"16:10 as 17:00\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"17:00 as 17:50\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"17:50 as 18:40\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"}\n\t\t\t}\n\t\taulas={1:\"13:20 as 14:10\",2:\"14:10 as 15:00\",3:\"15:00 as 15:50\",4:\"16:10 as 17:00\",5:\"17:00 as 17:50\",6:\"17:50 as 18:40\"}\n\telif(alternar==3):\n\t\tvalores_alter={\n\t\t\t\"18:10 as 19:00\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"19:00 as 19:50\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"19:50 as 20:40\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"20:50 as 21:40\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t\"21:40 as 22:30\":{1:\"Livre\",2:\"Livre\",3:\"Livre\",4:\"Livre\",5:\"Livre\"},\n\t\t\t}\n\t\taulas={1:\"18:10 as 19:00\",2:\"19:00 as 19:50\",3:\"19:50 as 20:40\",4:\"20:50 as 21:40\",5:\"21:40 as 22:30\"}\n\t\n\tagenda=Agenda.objects.filter(laboratorio=\"1\")\n\t# horario=Horario.objects.all()\n\tvalores=[]\n\tfor i in agenda:\n\t\tdia=i.dia_semana\n\t\tinicio=i.horario.inicio_uso.strftime('%H:%M')\n\t\tfim=i.horario.fim_uso.strftime('%H:%M')\n\t\tlista=[]\n\t\tfor aula in aulas:\n\t\t\tif str(inicio) in aulas[aula][:8:]:\n\t\t\t\t# print(\"Aula inicia no \"+str(aula)+\"° horario\")\n\t\t\t\tlista.append(aula)\n\t\t\tif str(fim) in aulas[aula][9::]:\n\t\t\t\t# print(\"Aula termina no \"+str(aula)+\"° horario\")\n\t\t\t\tlista.append(aula)\n\t\t\t\n\t\tif lista != []:\n\t\t\tlista=list(range(lista[0],lista[1]+1))\n\t\t\n\t\tfor indice in lista:\n\t\t\tvalores_alter[aulas[indice]][int(dia)]=i.professor\n\treturn valores_alter\n\ndef horarios():\n\thorarios=Horarios.objects.filter(turno=\"2\")\n\tfor i in horarios:\n\t\tprint(i.intervalo)\n\treturn horarios\n\n\ndef retornar_agenda_tarde(novo_horario):\n\tm={1:\"07:00 as 07:50\",2:\"07:50 as 08:40\",3:\"08:40 as 09:30\",4:\"09:50 as 10:40\",5:\"10:40 as 11:30\",6:\"11:30 as 12:20\"}\n\tt={1:\"13:20 as 14:10\",2:\"14:10 as 15:00\",3:\"15:00 as 15:50\",4:\"16:10 as 17:00\",5:\"17:00 as 17:50\",6:\"17:50 as 18:40\"}\n\tn={1:\"18:10 as 19:00\",2:\"19:00 as 19:50\",3:\"19:50 as 20:40\",4:\"20:50 as 21:40\",5:\"21:40 as 22:30\"}\n\tturno = novo_horario.inicio_uso.strftime('%H:%M')\n\tif turno in m.values():\n\t\taulas=m\n\telif turno in t.values():\n\t\taulas=t\n\telif  turno in t.values():\n\t\taulas=n\n\thorario_bd=Horario.objects.all()\n\t\n\tvalores=[]\n\tocupados=[]\n\tfor i in horario_bd:\n\t\tocupados.append(i.dia_semana)\n\tif novo_horario.dia_semana not in ocupados:\n\t\tprint(\"dia Livre\")\n\telse:\n\t\tfor i in horario_bd:\n\t\t\tdia=i.dia_semana\n\t\t\tif dia != novo_horario.dia_semana:\n\t\t\t\tcontinue\n\t\t\telse:\n\t\t\t\tinicio=novo_horario.inicio_uso.strftime('%H:%M')\n\t\t\t\tfim=novo_horario.fim_uso.strftime('%H:%M')\n\t\t\t\tinicio_bd=i.inicio_uso.strftime('%H:%M')\n\t\t\t\tfim_bd=i.fim_uso.strftime('%H:%M')\n\t\t\t\tvalores_novos=gerar_intervalo(aulas,inicio,fim)\n\t\t\t\tvalores_bd=gerar_intervalo(aulas,inicio_bd,fim_bd)\n",
-			"file": "services/agenda_services.py",
-			"file_size": 5028,
-			"file_write_time": 132258403297309694,
-			"settings":
-			{
-				"buffer_size": 5025,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "urls.py",
-			"settings":
-			{
-				"buffer_size": 502,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "from django.db import models\n\n# Create your models here.\n\n\nclass Horarios(models.Model):\n\tTURNO_CHOICES = (\n        (\"1\", \"Manhã\"),\n        (\"2\", \"Tarde\"),\n        (\"3\", \"Noite\")\n\t)\n\t\n\tDIA_SEMANA_CHOICES = (\n\t\t(\"1\", \"Segunda-Feira\"),\n\t\t(\"2\", \"Terça-Feira\"),\n\t\t(\"3\", \"Quarta-Feira\"),\n\t\t(\"4\", \"Quinta-Feira\"),\n\t\t(\"5\", \"Sexta-Feira\"),\n\t)\n\tintervalo = models.CharField(max_length = 14, null=False, blank=False)\n\tturno = models.CharField(max_length = 1, choices = TURNO_CHOICES, null=False, blank=False)\n\tdia_semana = models.CharField(max_length = 1, choices = DIA_SEMANA_CHOICES, null=False, blank=False)\n\tstatus = models.CharField(max_length = 1, choices = STATUS_CHOICES, null=False, blank=False)\n\nclass Local(models.Model):\n\t\n\tnome = models.CharField(max_length = 120, null=False, blank=False)\n\thorario_alocado = models.ManyToManyField(Horarios)\n\t\nclass Agenda(models.Model): #relacionamento 1 para muitos (um usuario pode fazer varios agendamentos, \n# em varios horarios e em varios turnos)\n\tsolicitante= models.CharField(max_length = 120, null=False, blank=False)\n\tlocal_solicitado = models.ForeignKey(\"Local\", on_delete=models.CASCADE)\n\tobservacoes= models.CharField(max_length = 150, null=True, blank=True)",
-			"file": "models.py",
-			"file_size": 1383,
-			"file_write_time": 132240201909845255,
-			"settings":
-			{
-				"buffer_size": 1209,
+				"buffer_size": 1182,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -188,6 +259,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"term",
+				"Terminus: Open Default Shell in Panel"
+			],
 			[
 				"ter",
 				"Terminus: Open Default Shell in Panel"
@@ -271,18 +346,28 @@
 		"/home/lab/projetos/labs/agenda_labs/agenda/entidades",
 		"/home/lab/projetos/labs/agenda_labs/agenda/migrations",
 		"/home/lab/projetos/labs/agenda_labs/agenda/services",
+		"/home/lab/projetos/labs/agenda_labs/agenda/static",
+		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda",
+		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda/css",
 		"/home/lab/projetos/labs/agenda_labs/agenda/templates",
-		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda"
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda",
+		"/home/lab/projetos/labs/agenda_labs/agenda_labs"
 	],
 	"file_history":
 	[
-		"/home/lab/projetos/labs/agenda_labs/agenda/migrations/0002_vagas.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/base.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/pagina_cadastro.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda_labs/settings.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/agenda.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda/css/personal.css",
+		"/home/lab/projetos/labs/agenda_labs/agenda/entidades/agenda.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/migrations/0001_initial.py",
 		"/home/lab/projetos/labs/agenda_labs/agenda/services/agenda_services.py",
 		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/cadastro_etapa2.html",
 		"/home/lab/projetos/labs/agenda_labs/agenda/urls.py",
-		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/pagina_cadastro.html",
-		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/agenda.html",
+		"/home/lab/projetos/labs/agenda_labs/agenda/forms.py",
 		"/home/lab/projetos/labs/agenda_labs/agenda/services/vagas_services.py",
+		"/home/lab/projetos/labs/agenda_labs/agenda/migrations/0002_vagas.py",
 		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/agenda_bootstrap.html",
 		"/home/lab/projetos/labs/agenda_labs/agenda/models.py",
 		"/media/lab/Dados/Videos/Aleatórios/Django ORM parte 1 Treina WEB/treinaweb-django-orm-parte-1-master/clientes/views/cliente_views.py",
@@ -299,21 +384,17 @@
 		"/home/lab/projetos/labs/agenda_labs/agenda/views.py",
 		"/media/lab/Dados/Documentos/projetos/semana-python_django/gerenciador_tarefas/app/services/tarefa_service.py",
 		"/media/lab/Dados/Documentos/projetos/reuniao/gerenciador_reunioes/app/services/reuniao_service.py",
-		"/home/lab/projetos/labs/agenda_labs/agenda/entidades/agenda.py",
-		"/home/lab/projetos/labs/agenda_labs/agenda_labs/settings.py",
-		"/home/lab/projetos/labs/agenda_labs/agenda/forms.py",
 		"/media/lab/Dados/Documentos/projetos/reuniao/gerenciador_reunioes/app/templates/reunioes/form_data_reuniao.html",
 		"/media/lab/Dados/Documentos/projetos/reuniao/gerenciador_reunioes/app/templates/reunioes/form_cadastro_usuario.html",
 		"/media/lab/LUCIANA/cadastro_part1.c",
 		"/media/lab/TANIA/index_agenda.html",
 		"/home/lab/projetos/labs/agenda_labs/agenda/templates/agenda/ver_agenda_tabela.html",
-		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda/css/personal.css",
 		"/home/lab/projetos/labs/agenda_labs/agenda/static/agenda/css/bootstrap.min.css",
 		"/home/lab/projetos/labs/agenda_labs/agenda_labs/urls.py"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 56.0
 	},
 	"find_in_files":
 	{
@@ -327,6 +408,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"container-",
+			"container-m",
+			"container-",
+			"conatiner",
+			"conatiner-",
+			"font-family:Arial, sans-serif;",
+			"')#,{\"",
 			"agenda_bootstrap",
 			"livre",
 			"lista",
@@ -346,6 +434,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"agenda",
 			"Livre",
 			"lista_bd",
@@ -362,7 +451,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -371,15 +460,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1943,
+						"buffer_size": 2339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1700,
-								1700
+								1523,
+								1523
 							]
 						],
 						"settings":
@@ -393,172 +482,172 @@
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 545.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "templates/agenda/agenda.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1797,
-								1797
-							]
-						],
-						"settings":
-						{
-							"SL.66.region_keys":
-							[
-							],
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 57.0,
+						"translation.x": 32.0,
+						"translation.y": 483.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "forms.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								407,
-								407
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-							],
-							"SL.21.region_keys":
-							[
-							],
-							"SL.278.region_keys":
-							[
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 57.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "entidades/agenda.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 554,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								554,
-								554
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "services/agenda_services.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5025,
+						"buffer_size": 5900,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1299,
-								1299
+								1917,
+								1917
 							]
 						],
 						"settings":
 						{
-							"SL.60.region_keys":
+							"SL.14.region_keys":
+							[
+							],
+							"SL.33.region_keys":
 							[
 							],
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.y": 1060.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "urls.py",
+					"buffer": 2,
+					"file": "templates/agenda/agendalabs_tabela.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 502,
+						"buffer_size": 1531,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								195,
-								195
+								1518,
+								1518
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"SL.22.region_keys":
+							[
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 116.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2093,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1470,
+								1470
+							]
+						],
+						"settings":
+						{
+							"SL.30.region_keys":
+							[
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1081.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "templates/agenda/pagina_cadastro.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"SL.32.region_keys":
+							[
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 69.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "static/agenda/css/personal.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1749,
+								1749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 690.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -567,29 +656,64 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1209,
+						"buffer_size": 1308,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								500,
-								500
+								1068,
+								1068
 							]
 						],
 						"settings":
 						{
+							"SL.19.region_keys":
+							[
+							],
 							"SL.52.region_keys":
 							[
 							],
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 20.0,
+						"translation.y": 552.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								357
+							]
+						],
+						"settings":
+						{
+							"SL.28.region_keys":
+							[
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -597,7 +721,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -632,7 +756,7 @@
 	},
 	"output.Terminus":
 	{
-		"height": 115.0
+		"height": 199.0
 	},
 	"output.find_results":
 	{
@@ -646,7 +770,7 @@
 	"project": "labs.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 100.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -684,7 +808,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 230.0,
+	"side_bar_width": 292.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
